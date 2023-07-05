@@ -6,3 +6,7 @@ export const sum = moduloMatematicas.suma(1, 2)
 export const multi = moduloMatematicas.multiplica(4, 5)
 // console.log(multi)
 
+console.log(sum)
+console.log(multi)
+console.log(chalk.red('Hello world!'));
+
