@@ -1,29 +1,18 @@
-const logger = require('./logger');
+// import { suma, eleva } from './modulos/matematicas.js'
+import * as moduloMatematicas from './modulos/matematicas.js'
+import getAutor, { libro } from './modulos/leteratura.js'
+import { multi, sum } from './controller.js'
 
 
-// logger.log("Hola estoy saliendo por pantalla")
-logger.info("Hola esto es un mensaje informativo")
-logger.debug("Esto es un mensaje de debu")
-logger.warn("Esto es un mensaje de advertencia")
-logger.error("Esto es un error")
+// const sum = moduloMatematicas.suma(4, 12)
+// console.log(sum)
 
+// const potencia = moduloMatematicas.eleva(5, 10)
+// console.log(potencia)
 
-module.exports = logger;
+// console.log(getAutor())
+// console.log(libro)
 
-const pruebaError = str => {
-    if(typeof str === "string") {
-        return "Soy un string"
-    }
-    throw new Error ( "Deberia ser un string" )
-}
-
-try {
-    // Este sirve para ejecutar un código que puede fallar
-    console.log("Está ejecutándose de manera correcta")
-    const doble = pruebaError(numero)
-    console.log(doble)
-} catch(e) {
-    // En caso de fallar, quiero que ejecutes
-    console.error("ERROR")
-    console.error(`El valor de e es: $(e)`)
- } 
+console.log(sum)
+console.log(multi)
+console.log(chalk.green('Hello world!'));
