@@ -1,5 +1,13 @@
-localStorage.setItem("nombre", "Yan")
-localStorage.setItem("apellido", "Machado")
-localStorage.setItem("persona", JSON.stringify({ nombre: "Carlos", apellido: "Machado"}))
-sessionStorage.setItem("persona", JSON.stringify({ nombre: "Carlos", apellido: "Machado"}))
-document.cookie = "nombreCaducidad=nombre; expires=" +  new Date(2023, 6, 9).toUTCString();
+const nombre = "Yan"
+const apellido = "Machado"
+
+const datos = {
+    nombre,
+    apellido
+}
+
+sessionStorage.setItem("datos", JSON.stringify(datos))
+localStorage.setItem("datos", JSON.stringify(datos))
+
+const now = new Date()
+document.cookie = `datos=${JSON.stringify(datos)};expires=${new Date(now.getTime() + 2 * 60000)}`
